@@ -1,6 +1,6 @@
 var app = app || {};
 
-app.BookView = Backbone.View.extend({
+app.LibraryView = Backbone.View.extend({
 	el: '#books',
 	initialize: function(initialBooks) {
 		this.collection = new app.Library( initialBooks );
@@ -9,7 +9,7 @@ app.BookView = Backbone.View.extend({
 
 	//render each book in initial book collection
 	render: function(){
-		this.collection.each(function(book)) {
+		this.collection.each(function(book) {
 			this.renderBook( book );
 		}, this );
 	},
